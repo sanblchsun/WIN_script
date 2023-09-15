@@ -1,0 +1,7 @@
+.idea/
+__pycache__/
+*.xlsx
+.env
+venv/
+main.build/
+main.dist/
