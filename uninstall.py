@@ -3,14 +3,14 @@ import os
 import pandas as pd
 from ping3 import ping
 
-P = 'Vfybgekzwbz3@!'
-U = 'optima-energy\ininsys'
-AD_SEARCH_TREE  = 'DC=optima-energy,DC=ru'
+P = ''
+U = ''
+AD_SEARCH_TREE  = 'DC=,DC='
 
 def uninstall():
     df = pd.read_excel("ESET.xlsx")
     res = df.loc[(df["IP"].str.startswith("192.168.1.")) & (df["PC"] != "UVT")]
-    # wmic /node:"SHVETCOV.OPTIMA-ENERGY.RU" product where name="ESET Endpoint Security" call uninstall
+    # wmic /node:"" product where name="ESET Endpoint Security" call uninstall
     res2 = res[['PC', 'installed progs']]
     for index, row in res2.iterrows():
         res3 = ping(row['PC'])

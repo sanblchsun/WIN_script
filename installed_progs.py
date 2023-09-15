@@ -14,11 +14,11 @@ from ldap3 import SUBTREE, Server, Connection
 def getWinDrives():
 
     table = {"PC": [], "installed progs": []}
-    AD_PASSWORD = 'Vfybgekzwbz3@!'
-    AD_USER = 'optima-energy\ininsys'
-    AD_SEARCH_TREE  = 'DC=optima-energy,DC=ru'
+    AD_PASSWORD = ''
+    AD_USER = ''
+    AD_SEARCH_TREE  = 'DC=,DC='
 
-    server = Server("192.168.1.4")
+    server = Server("IP")
     conn = Connection(server, user=AD_USER, password=AD_PASSWORD)
 
     try:

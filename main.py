@@ -30,10 +30,10 @@ class MyWindow(QtWidgets.QMainWindow):
         # create thread
         self.thread = QtCore.QThread()
         # create object which will be moved to another thread
-        # self.ip_addres = "192.168.1.4"
-        # self.AD_PASSWORD = 'Vfybgekzwbz3@!'
-        # self.AD_USER = 'optima-energy\ininsys'
-        # self.AD_SEARCH_TREE = 'DC=optima-energy,DC=ru'
+        # self.ip_addres = ""
+        # self.AD_PASSWORD = ''
+        # self.AD_USER = ''
+        # self.AD_SEARCH_TREE = 'DC=,DC='
         ipaddress = self.ui.lineEditPage_1.text()
         aduser = self.ui.lineEdit_3Page_1.text()
         adpassord = self.ui.lineEdit_4Page_1.text()

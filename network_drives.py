@@ -17,12 +17,12 @@ def getWinDrives():
     table1 = {"network drives": [], 'letter': [], 'PC': []}
     # table1 = {"network drives": []}
     # host = "BONDAR" # remote MACHINE or local
-    AD_PASSWORD = 'Vfybgekzwbz3@!'
-    AD_USER = 'optima-energy\ininsys'
-    AD_SEARCH_TREE  = 'DC=optima-energy,DC=ru'
-    # wmic /node:'BONDAR' /user:'optima-energy\ininsys' /PASSWORD:'Vfybgekzwbz3@!' service where (name='RemoteRegistry') get StartMode
+    AD_PASSWORD = ''
+    AD_USER = ''
+    AD_SEARCH_TREE  = 'DC=,DC='
+    # wmic /node:'' /user:'' /PASSWORD:'!' service where (name='RemoteRegistry') get StartMode
 
-    server = Server("192.168.1.4")
+    server = Server("")
     conn = Connection(server, user=AD_USER, password=AD_PASSWORD)
 
     try:
