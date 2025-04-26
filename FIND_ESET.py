@@ -65,7 +65,7 @@ async def execute_task(host, ad_user, ad_password, table):
             list_install = list(map(str.strip, res1.replace('\n\n', ',').split(',')))
             res_list.append("ESET не найден")
             for i in list_install:
-                if "ESET" in i and "Security" in i:
+                if "VIPNet" in i:
                     res_list.clear()
                     res_list.append(i)
                     table["PC"].append(host)
